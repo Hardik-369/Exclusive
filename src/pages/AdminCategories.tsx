@@ -88,14 +88,14 @@ const AdminCategories = () => {
 
         {/* Discover Section */}
         <section className="space-y-6 stagger-fade">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <h2 className="text-xl font-bold text-gray-800">Discover</h2>
-            <div className="flex gap-3">
-              <button className="flex items-center gap-2 px-4 py-2 bg-[#4CAF50] text-white rounded-lg text-sm font-semibold shadow-sm hover:bg-[#43a047] transition-all">
+            <div className="flex flex-wrap gap-3 w-full sm:w-auto">
+              <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-[#4CAF50] text-white rounded-lg text-sm font-semibold shadow-sm hover:bg-[#43a047] transition-all">
                 <PlusCircle className="w-4 h-4" />
                 Add Product
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-all">
+              <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-50 transition-all">
                 More Action
                 <MoreVertical className="w-4 h-4 text-gray-400" />
               </button>
@@ -127,7 +127,7 @@ const AdminCategories = () => {
         {/* Product Table Section */}
         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden stagger-fade">
           <div className="p-6 flex flex-col xl:flex-row xl:items-center justify-between gap-6 border-b border-gray-50">
-            <div className="flex items-center gap-0.5 p-1 bg-[#F8F9FB] rounded-xl overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-0.5 p-1 bg-[#F8F9FB] rounded-xl overflow-x-auto no-scrollbar w-full xl:w-auto">
               {['All Product (145)', 'Featured Products', 'On Sale', 'Out of Stock'].map((tab) => (
                 <button 
                   key={tab}
@@ -142,7 +142,7 @@ const AdminCategories = () => {
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 w-full xl:w-auto">
               <div className="relative flex-1 min-w-[200px]">
                 <input 
                   type="text" 
@@ -151,9 +151,9 @@ const AdminCategories = () => {
                 />
                 <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
               </div>
-              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400"><Filter className="w-4 h-4" /></button>
-              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400"><Plus className="w-4 h-4" /></button>
-              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400"><MoreVertical className="w-4 h-4" /></button>
+              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400 shrink-0"><Filter className="w-4 h-4" /></button>
+              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400 shrink-0"><Plus className="w-4 h-4" /></button>
+              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400 shrink-0"><MoreVertical className="w-4 h-4" /></button>
             </div>
           </div>
 

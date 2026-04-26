@@ -198,9 +198,9 @@ const DashboardContent = () => (
     <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
       {/* Product Orders */}
       <div className="xl:col-span-2 bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
-        <div className="p-6 sm:p-8 flex items-center justify-between border-b border-gray-50">
+        <div className="p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-50">
           <h3 className="font-bold text-gray-900 text-lg">Product Orders</h3>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-full sm:w-auto justify-start sm:justify-end">
             <button className="p-2 border border-gray-100 rounded-lg hover:bg-gray-50"><Search className="w-4 h-4 text-gray-500" /></button>
             <button className="p-2 border border-gray-100 rounded-lg hover:bg-gray-50"><Filter className="w-4 h-4 text-gray-500" /></button>
           </div>

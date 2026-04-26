@@ -145,7 +145,7 @@ const AdminTransactions = () => {
         {/* Transactions Table Section */}
         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
           <div className="p-6 flex flex-col xl:flex-row xl:items-center justify-between gap-6 border-b border-gray-50">
-            <div className="flex items-center gap-0.5 p-1 bg-[#F8F9FB] rounded-xl overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-0.5 p-1 bg-[#F8F9FB] rounded-xl overflow-x-auto no-scrollbar w-full xl:w-auto">
               {['All order (240)', 'Completed', 'Pending', 'Canceled'].map((tab) => (
                 <button 
                   key={tab}
@@ -160,7 +160,7 @@ const AdminTransactions = () => {
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 w-full xl:w-auto">
               <div className="relative flex-1 min-w-[200px]">
                 <input 
                   type="text" 
@@ -169,9 +169,9 @@ const AdminTransactions = () => {
                 />
                 <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
               </div>
-              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400"><Filter className="w-4 h-4" /></button>
-              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400"><ArrowUpDown className="w-4 h-4" /></button>
-              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400"><MoreHorizontal className="w-4 h-4" /></button>
+              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400 shrink-0"><Filter className="w-4 h-4" /></button>
+              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400 shrink-0"><ArrowUpDown className="w-4 h-4" /></button>
+              <button className="p-2.5 border border-gray-100 rounded-lg hover:bg-gray-50 text-gray-400 shrink-0"><MoreHorizontal className="w-4 h-4" /></button>
             </div>
           </div>
 
