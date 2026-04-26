@@ -14,8 +14,6 @@ import {
 } from 'lucide-react';
 import { cn } from '../utils/cn';
 import AdminLayout from '../layouts/AdminLayout';
-import gsap from 'gsap';
-
 const categories = [
   { id: 1, name: 'Electronics', images: ['https://images.unsplash.com/photo-1498049794561-7780e7231661?w=60&q=80', 'https://images.unsplash.com/photo-1526733158133-583329a493b3?w=60&q=80', 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=60&q=80', 'https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=60&q=80'] },
   { id: 2, name: 'Fashion', images: ['https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=60&q=80', 'https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=60&q=80', 'https://images.unsplash.com/photo-1539109132314-34759616b40c?w=60&q=80', 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=60&q=80'] },
@@ -42,37 +40,14 @@ const productsData = [
 
 const AdminCategories = () => {
   const [activeTab, setActiveTab] = useState('All Product (145)');
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from('.stagger-fade', {
-        opacity: 0,
-        y: 20,
-        stagger: 0.1,
-        duration: 0.8,
-        ease: 'power3.out'
-      });
-      
-      gsap.from('.stagger-card', {
-        scale: 0.95,
-        opacity: 0,
-        stagger: 0.05,
-        duration: 0.6,
-        ease: 'power2.out',
-        delay: 0.2
-      });
-    }, containerRef);
-    return () => ctx.revert();
-  }, []);
 
   return (
     <AdminLayout>
-      <div ref={containerRef} className="space-y-8 animate-in fade-in duration-700">
+      <div className="space-y-8 animate-in fade-in duration-700">
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 stagger-fade">
           <h1 className="text-2xl font-bold text-gray-800">Categories</h1>
-          <div className="flex items-center gap-4">
-            <div className="relative">
+          <div className="flex items-center gap-4 w-full sm:w-auto">
+            <div className="relative flex-1 sm:flex-none">
               <input 
                 type="text" 
                 placeholder="Search data, users, or reports" 
@@ -80,7 +55,7 @@ const AdminCategories = () => {
               />
               <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             </div>
-            <button className="relative p-2.5 bg-white transition-all hover:bg-gray-50 rounded-full group">
+            <button className="relative p-2.5 bg-white transition-all hover:bg-gray-50 rounded-full group shrink-0">
               <Bell className="w-5 h-5 text-gray-400 group-hover:text-black" />
             </button>
           </div>

@@ -145,7 +145,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 lg:ml-[280px] p-4 md:p-6 lg:p-14 min-h-screen">
+      <main className="flex-1 min-w-0 w-full lg:ml-[280px] p-4 md:p-6 lg:p-14 min-h-screen max-w-[100vw]">
         <button 
           onClick={toggleSidebar}
           className="lg:hidden mb-6 p-2.5 bg-white border border-gray-100 rounded-xl shadow-sm text-gray-400"

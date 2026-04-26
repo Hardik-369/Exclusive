@@ -36,8 +36,8 @@ const AdminAddProduct = () => {
           <div className="flex items-center">
             <h1 className="text-[22px] font-bold text-gray-900 tracking-tight">Add Product</h1>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="relative">
+          <div className="flex items-center gap-4 w-full sm:w-auto">
+            <div className="relative flex-1 sm:flex-none">
               <input 
                 type="text" 
                 placeholder="Search data, users, or reports" 

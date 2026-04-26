@@ -72,8 +72,8 @@ const AdminTransactions = () => {
       <div className="space-y-8 pb-10">
         <header className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
           <h1 className="text-2xl font-bold text-gray-800">Transaction</h1>
-          <div className="flex items-center gap-4">
-            <div className="relative">
+          <div className="flex items-center gap-4 w-full sm:w-auto">
+            <div className="relative flex-1 sm:flex-none">
               <input 
                 type="text" 
                 placeholder="Search data, users, or reports" 
@@ -81,7 +81,7 @@ const AdminTransactions = () => {
               />
               <Search className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             </div>
-            <button className="relative p-2.5 bg-white transition-all hover:bg-gray-50 rounded-full group">
+            <button className="relative p-2.5 bg-white transition-all hover:bg-gray-50 rounded-full group shrink-0">
               <Bell className="w-5 h-5 text-gray-400 group-hover:text-black" />
               <span className="absolute top-2.5 right-3 w-1.5 h-1.5 bg-red-500 rounded-full border border-white"></span>
             </button>

@@ -58,7 +58,7 @@ const DashboardContent = () => (
         <h1 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">Dashboard Overview</h1>
       </div>
 
-      <div className="flex items-center gap-3 sm:gap-6">
+      <div className="flex items-center gap-3 sm:gap-6 w-full sm:w-auto">
         <div className="relative flex-1 sm:flex-none">
           <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-3.5 sm:w-4 h-3.5 sm:h-4 text-gray-400" />
           <input 
