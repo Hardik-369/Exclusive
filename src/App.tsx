@@ -16,6 +16,7 @@ import AdminOrders from './pages/AdminOrders';
 import AdminCategories from './pages/AdminCategories';
 import AdminTransactions from './pages/AdminTransactions';
 import AdminAddProduct from './pages/AdminAddProduct';
+import AdminRole from './pages/AdminRole';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -40,6 +41,7 @@ export default function App() {
         <Route path="/admin/categories" element={<AdminCategories />} />
         <Route path="/admin/transactions" element={<AdminTransactions />} />
         <Route path="/admin/products/add" element={<AdminAddProduct />} />
+        <Route path="/admin/role" element={<AdminRole />} />
       </Routes>
     </BrowserRouter>
   );
